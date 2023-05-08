@@ -37,7 +37,7 @@ Monitor and flag unusual behavior patterns, such as rapid form submissions, exce
 
 ## Integration with Third-Party Bot Detection Services:
 
-Integrate with third-party services like Google reCAPTCHA, Cloudflare Bot Management, or DataDome for additional layers of bot detection and mitigation.
+Integrate with third-party services like Cloudflare Bot Management, or DataDome for additional layers of bot detection and mitigation.
 
 
 # Libraries
