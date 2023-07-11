@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: red;
+  color: white;
+  border-left: 3px solid blue;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  overflow: hidden;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0px;
+  height: 0;
+
+  border: 1px solid blue;
+  border-left: none;
+  border-bottom: none;
+  transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+
+.btn::before {
+  left: -3px;
+  /* border-bottom: none; */
+}
+
+.btn::after {
+  right: -3px;
+  border-top: none;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
