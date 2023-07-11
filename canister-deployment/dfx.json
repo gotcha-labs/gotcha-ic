@@ -1,0 +1,46 @@
+{
+  "canisters": {
+    "gotcha2_backend": {
+      "main": "src/gotcha2_backend/main.mo",
+      "type": "motoko"
+    },
+    "gotcha2_frontend": {
+      "dependencies": [
+        "gotcha2_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/gotcha2_frontend/src/index.html"
+      },
+      "source": [
+        "src/gotcha2_frontend/assets",
+        "dist/gotcha2_frontend/"
+      ],
+      "type": "assets"
+    },
+    "internet_identity": {
+      "type": "custom",
+      "candid": "./internet_identity.did",
+      "wasm": "./internet_identity_dev.wasm.gz",
+      "frontend": {}
+    },
+    "Captchas": {
+      "main": "src/gotcha2_backend/captchas.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral",
+      "cors": true
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

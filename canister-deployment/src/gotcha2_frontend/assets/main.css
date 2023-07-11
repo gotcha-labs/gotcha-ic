@@ -1,0 +1,193 @@
+body {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+
+img {
+    max-width: 50vw;
+    max-height: 25vw;
+    display: block;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    flex-flow: row wrap;
+    max-width: 40vw;
+    margin: auto;
+    align-items: baseline;
+}
+
+/* button[type="submit"] {
+    padding: 5px 20px;
+    margin: 10px auto;
+    float: right;
+} */
+
+.btn {
+    color: rgb(0, 0, 0);
+    border: none;
+    /* padding: 15px 45px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.login-btn {
+    background-color: #29abe2;
+    padding: 15px 45px;
+}
+
+.signup-btn {
+    background-color: #ce207c;
+    padding: 15px 40px;
+}
+
+
+#greeting {
+    margin: 10px auto;
+    padding: 10px 60px;
+    border: 1px solid #222;
+}
+
+#greeting:empty {
+    display: none;
+}
+
+.container {
+    padding: 3.5rem 2.5rem 2rem 2.5rem;
+    max-width: 365px;
+    min-width: 300px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 512px) {
+    .container {
+        border: 2px #d9d9da solid;
+        border-radius: 4px;
+    }
+}
+
+main::before {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    height: 24px;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main::after {
+    content: "";
+    display: block;
+    flex-grow: 2;
+    height: 24px;
+}
+
+p {
+    line-height: 22px;
+    color: #555659;
+    ;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+input,
+div,
+section,
+span {
+    font-size: 1.2rem;
+    color: #292a2e;
+    ;
+}
+
+input {
+    margin-bottom: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    border: 2px #d9d9da solid;
+    width: auto;
+    background-color: #fff;
+
+    line-height: 1.25rem;
+    letter-spacing: 0.005em;
+}
+
+input.errored {
+    border: double 2px #f15a24;
+}
+
+input.errored::placeholder {
+    color: #f15a24;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin: auto;
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        margin: inherit;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 0 1rem;
+}
+
+form,
+label {
+    display: flex;
+}
+
+form {
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+.whoamiButton {
+    border: 1px solid #c3c3c4;
+    background: #c1c1c1;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0.005em;
+}
+
+.whoamiButton:hover,
+.whoamiButton:focus,
+a:focus {
+    opacity: 0.9;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #29abe2;
+    outline: 2px dotted transparent;
+    outline-offset: 2px;
+}

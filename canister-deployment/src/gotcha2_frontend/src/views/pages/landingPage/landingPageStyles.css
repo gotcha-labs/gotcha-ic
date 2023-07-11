@@ -1,0 +1,171 @@
+.Wrapper {
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgb(250, 251, 255);
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.section-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-top: 12%;
+  min-height: 55vh;
+}
+
+.section-container .container {
+  height: 100%;
+}
+
+.cloud1 {
+  position: absolute;
+  top: 3rem;
+  left: 18rem;
+  z-index: 0.5;
+}
+
+.cloud2 {
+  position: absolute;
+  top: 2.65rem;
+  left: 40rem;
+  z-index: 0.5;
+}
+
+.cloud3 {
+  position: absolute;
+  top: 2.45rem;
+  right: 10rem;
+  z-index: 0.5;
+}
+
+.inner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.inner-section h2 {
+  margin: 2rem;
+}
+
+.btns-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.register-btn:hover {
+  color: #fff !important;
+}
+
+.inner-section .svg-img {
+  height: 67px;
+  width: 300px;
+  z-index: 9;
+}
+
+.inner-section img {
+  height: 67px;
+  width: 300px;
+  z-index: 9;
+}
+
+.brand-log {
+  height: 100%;
+  max-width: 100%;
+  width: fit-content;
+}
+
+.brand-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.brand-animation {
+  height: 100%;
+  max-width: 100%;
+  width: fit-content;
+}
+
+.landing-footer {
+  margin-top: 80px;
+  position: relative;
+  bottom: 0px;
+}
+
+.social-icons {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.social_profile_item {
+  border-radius: 50%;
+  background-color: rgb(239, 245, 249);
+  width: 46px;
+  height: 46px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  margin: 0px 9px;
+}
+
+.social_profile_item:hover {
+  background-color: rgb(17, 35, 53);
+}
+
+@media screen and (max-width: 1229px) {
+  .clouds {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .clouds {
+    animation-fill-mode: both;
+    animation-duration: 1000ms;
+    animation-delay: 400ms;
+    animation-iteration-count: 1;
+    opacity: 1;
+    animation-name: clouds-reveal;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .btns-group {
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+}
+
+@keyframes clouds-reveal {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0px, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
